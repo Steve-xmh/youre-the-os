@@ -10,8 +10,8 @@ from lib.scene import Scene
 _parts = [
     HowToPlayPart(
         [
-            'In this game, you are the operating system of a computer.',
-            'You have to manage processes, memory, and input/output (I/O) events.'
+            '在游戏中，你是一台电脑中的操作系统。',
+            '你需要管理进程、内存，和输入输出（I/O）事件。'
         ], 
         [
             pygame.image.load(path.join('assets', 'how_to_play_0_0.png'))
@@ -19,7 +19,7 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'At the top of the screen, you can see your CPUs.'
+            '在屏幕的顶部，你可以看到你的所有 CPU。'
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_1_0.png'))
@@ -27,7 +27,7 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'Under your CPUs, you have the list of your idle processes.'
+            '在 CPU 下面，你能看到有一些处于闲置状态的进程。'
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_2_0.png'))
@@ -35,7 +35,7 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'You can click on an idle process to assign it to an available CPU.',
+            '你可以点击一个闲置状态的进程将其加入到一个可用的 CPU 中。',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_3_0.png')),
@@ -44,7 +44,7 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'The same way, you can click on a running process to remove it from its CPU.',
+            '同样，你可以点击 CPU 上的进程将其移出到闲置进程中。',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_4_0.png')),
@@ -53,7 +53,7 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'Over time, idle processes will go through 6 starvation levels.'
+            '随着时间流逝，闲置的进程会逐渐进入六种“饥饿”等级。'
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_5_0.png')),
@@ -66,8 +66,8 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'Starvation levels help you know which processes have been idle the longest.',
-            'When a process stays idle for too long, the user becomes impatient and kills it.'
+            '饥饿等级能帮助你了解哪些进程闲置了太长的时间。',
+            '如果一个进程闲置了太长时间，用户就会失去耐心然后杀掉那个进程。',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_6_0.png')),
@@ -76,7 +76,7 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'A process can also terminate gracefully. In that case, you can simply remove it by clicking on it.'
+            '一个进程也会正常地终止，此时只需要点击对应的进程就能将其删除。'
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_7_0.png'))
@@ -84,8 +84,8 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'Sometimes, a running process becomes blocked because it is waiting for an I/O event.',
-            'Blocked processes waste CPU time. It is a good idea to remove them from their CPU.',
+            '有时候，一个工作中的进程会因为等待一个输入输出事件（I/O 事件）而阻塞。',
+            '阻塞中的进程会浪费 CPU 的工作时间。所以将其移出 CPU 让出工作时间是一个好办法。',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_8_0.png'))
@@ -93,8 +93,8 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'When you have blocked processes, watch the I/O event bar.',
-            'Make sure to click on it when it has events, otherwise your processes will stay blocked and starve.'
+            '如果你有阻塞中的进程，留意一下输入输出事件（I/O 事件）条。',
+            '在有事件的时候要记得点击它们，否则你的进程会一直阻塞下去直到“饿死”被杀掉',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_9_0.png')),
@@ -103,8 +103,8 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'You also have to manage memory! Processes create memory pages when they run.',
-            'Pages that are currently in use appear in white. Currently unused pages appear in grey.'
+            '你还需要管理内存！进程运行的时候会创建出内存页面。',
+            '正在使用中的内存页面会显示成白色，当前尚未使用的内存则会显示成灰色。',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_10_0.png'))
@@ -112,8 +112,8 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'Sometimes, you will run out of RAM and new pages will be written on disk.',
-            'You can move pages between RAM and disk by clicking on them.'
+            '有时候，你的内存会耗尽然后新的内存页面会被写入到磁盘中。',
+            '你可以通过点击内存页面来将其在内存和磁盘间移动。',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_11_0.png')),
@@ -122,8 +122,8 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            'Processes can only use pages from RAM. A process will blink if trying to use pages that are on disk.',
-            'This is when you need to swap pages! The pages that the process is trying to access will also blink.'
+            '进程只能使用处于内存中的内存页面，如果进程需要一个处于磁盘中的内存页面的话进程就会闪烁。',
+            '这时候你就需要交换页面了，进程所需要使用的内存页面也会一起闪烁。',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_12_0.png')),
@@ -133,7 +133,7 @@ _parts = [
     ),
     HowToPlayPart(
         [
-            "If you don\'t swap a process' pages when needed, the process will eventually starve and get killed.",
+            "如果你不及时将进程所需的内存页面交换到内存中的话，那个进程最终也会“饿死”然后被用户杀死。",
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_13_0.png'))
@@ -142,8 +142,8 @@ _parts = [
     ),    
     HowToPlayPart(
         [
-            'Once the number of killed processes reaches 10, the user gets angry and reboots you.',
-            'The game is then over. Your goal is to survive as long as possible without getting rebooted!'
+            '一旦被用户杀掉的进程数量达到 10 个，用户就会生气，然后把你重启了。',
+            '游戏也就会结束，你的目标就是在被用户重启前尽可能存活下来！',
         ],
         [
             pygame.image.load(path.join('assets', 'how_to_play_14_0.png'))

@@ -1,7 +1,12 @@
 import asyncio
 from os import path
+import os
 import pygame
 import sys
+
+if getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS'):
+    os.chdir(sys._MEIPASS)
+    print("Changed cwd to", sys._MEIPASS)
 
 from scenes.game import Game
 from lib.game_event import GameEvent

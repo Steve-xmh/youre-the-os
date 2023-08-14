@@ -43,21 +43,21 @@ class MainMenu(Scene):
         )
         self._scene_objects.append(self._difficulty_selector)
         
-        play_button = Button('Play', self._on_start_button_click)
+        play_button = Button('开始游戏', self._on_start_button_click)
         play_button.view.set_xy(
             (self._screen.get_width() - play_button.view.width) / 2,
             self._difficulty_selector.view.y + self._difficulty_selector.view.height + 20
         )
         self._scene_objects.append(play_button)
         
-        how_to_play_button = Button('How to Play', self._start_how_to_play)
+        how_to_play_button = Button('玩法说明', self._start_how_to_play)
         how_to_play_button.view.set_xy(
             150,
             self._screen.get_height() - how_to_play_button.view.height - 100
         )
         self._scene_objects.append(how_to_play_button)
         
-        about_button = Button('About', self._open_about_dialog)
+        about_button = Button('关于', self._open_about_dialog)
         about_button.view.set_xy(
             self._screen.get_width() - about_button.view.width - 150,
             self._screen.get_height() - about_button.view.height - 100
